@@ -36,7 +36,7 @@ void setup() {
   pinMode(D1, OUTPUT);
   Serial.println();
   Serial.println();
-  Serial.print("Connecting to ");
+  /*Serial.print("Connecting to ");
   Serial.println(ssid);
 
   WiFi.begin(ssid, password);
@@ -50,7 +50,7 @@ void setup() {
   Serial.println("");
   Serial.println("WiFi connected");  
   Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
+  Serial.println(WiFi.localIP());*/
 }
 
 
@@ -59,18 +59,18 @@ int value = 0;
 
 void loop() {
   delay(1000);
-
+/*
   Serial.print("connecting to ");
   Serial.println(host);
 
-  /** WIFI CONNECT */
+  // WIFI CONNECT 
   WiFiClient client;
   const int httpPort = 80;
   if (!client.connect(host, httpPort)) {
     Serial.println("connection failed");
     return;
   }
-
+*/
   ////////////////////////////////////////////////////////////
   digitalWrite(D2,HIGH);  //Noise
   unsigned long currentMillis = millis();
@@ -123,7 +123,7 @@ void loop() {
   Serial.println(url);
  
   // This will send the request to the server
-  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
+  /*client.print(String("GET ") + url + " HTTP/1.1\r\n" +
                "Host: " + host + "\r\n" +
                "Connection: close\r\n\r\n");
   int timeout = millis() + 5000;
@@ -142,7 +142,7 @@ void loop() {
   }
  
   Serial.println();
-  Serial.println("closing connection");
+  Serial.println("closing connection");*/
 }
 
 
